@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Multicast trong Java</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav>
+<h1>⚡ Toại's Blog</h1>
+<div>
+<a href="../index.html">Trang chủ</a>
+<a href="../blog.html">Blog</a>
+<a href="../about.html">Giới thiệu</a>
+<a href="../contact.html">Liên hệ</a>
+</div>
+</nav>
+
+<article class="bai-viet">
+<h1>Multicast trong Java</h1>
+<div class="post-meta">📅 2025 · 🏷️ Java · Multicast</div>
+
+<p>
+Trong lập trình mạng, Multicast là kỹ thuật cho phép gửi dữ liệu
+từ một nguồn đến nhiều thiết bị cùng lúc thông qua mạng.
+Kỹ thuật này đặc biệt hữu ích trong các hệ thống cần truyền
+cùng một nội dung đến nhiều người dùng.
+</p>
+
+<h2>1. Multicast là gì?</h2>
+<p>
+Multicast là hình thức truyền dữ liệu theo mô hình
+<b>một – nhiều</b>. Thay vì gửi dữ liệu riêng lẻ cho từng client
+(unicast), multicast cho phép gửi một lần đến một nhóm các client.
+</p>
+
+<h2>2. So sánh Unicast, Broadcast và Multicast</h2>
+<ul>
+<li><b>Unicast:</b> gửi dữ liệu đến một máy cụ thể.</li>
+<li><b>Broadcast:</b> gửi dữ liệu đến tất cả các máy trong mạng.</li>
+<li><b>Multicast:</b> gửi dữ liệu đến một nhóm đã đăng ký.</li>
+</ul>
+
+<h2>3. Multicast trong Java</h2>
+<p>
+Java hỗ trợ multicast thông qua lớp <b>MulticastSocket</b>
+trong gói <b>java.net</b>. Các client có thể tham gia (join)
+hoặc rời (leave) một nhóm multicast.
+</p>
+
+<h2>4. Ứng dụng thực tế</h2>
+<ul>
+<li>Truyền video trực tuyến</li>
+<li>Hệ thống thông báo</li>
+<li>Họp trực tuyến</li>
+</ul>
+
+<h2>5. Ưu và nhược điểm</h2>
+<p><b>Ưu điểm:</b> tiết kiệm băng thông, hiệu quả cao.</p>
+<p><b>Nhược điểm:</b> không đảm bảo độ tin cậy như TCP.</p>
+
+<div class="ket-luan">
+<b>Kết luận:</b><br>
+Multicast là giải pháp tối ưu khi cần truyền dữ liệu
+đến nhiều client cùng lúc trong lập trình mạng.
+</div>
+</article>
+
+<footer>© 2025 | Lê Công Toại</footer>
+</body>
+</html>

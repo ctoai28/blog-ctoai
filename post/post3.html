@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Socket trong Java</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav>
+    <h1>⚡ Toại's Blog</h1>
+    <div>
+        <a href="../index.html">Trang chủ</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../about.html">Giới thiệu</a>
+        <a href="../contact.html">Liên hệ</a>
+    </div>
+</nav>
+
+<article class="bai-viet">
+
+    <h1>Socket trong Java</h1>
+    <div class="post-meta">
+        📅 2025 · 🏷️ Java · Lập trình mạng
+    </div>
+
+    <p>
+        Trong lập trình mạng, <b>Socket</b> là khái niệm cốt lõi và quan trọng nhất.
+        Hầu hết các ứng dụng mạng như chat, web server, truyền file
+        đều được xây dựng dựa trên cơ chế socket.
+        Vì vậy, việc hiểu rõ socket là điều bắt buộc đối với sinh viên CNTT
+        khi học môn lập trình mạng.
+    </p>
+
+    <h2>1. Socket là gì?</h2>
+    <p>
+        Socket có thể hiểu đơn giản là <b>điểm kết nối</b> giữa hai chương trình
+        đang chạy trên hai thiết bị khác nhau trong mạng.
+        Mỗi socket được xác định bởi hai thông tin quan trọng:
+        <b>địa chỉ IP</b> và <b>số cổng (port)</b>.
+    </p>
+
+    <p>
+        Khi một chương trình client kết nối đến server thông qua socket,
+        hai bên có thể gửi và nhận dữ liệu hai chiều.
+        Việc truyền dữ liệu này diễn ra theo các giao thức mạng,
+        phổ biến nhất là giao thức TCP.
+    </p>
+
+    <h2>2. Socket hoạt động như thế nào?</h2>
+    <p>
+        Socket trong Java thường hoạt động theo mô hình Client – Server.
+        Server sẽ mở một cổng mạng và chờ client kết nối đến.
+        Khi client gửi yêu cầu kết nối, server chấp nhận
+        và thiết lập một socket để giao tiếp.
+    </p>
+
+    <p>
+        Sau khi kết nối được thiết lập, dữ liệu sẽ được truyền
+        thông qua các luồng vào (InputStream) và luồng ra (OutputStream).
+        Hai bên có thể liên tục trao đổi dữ liệu cho đến khi
+        một trong hai bên đóng kết nối.
+    </p>
+
+    <h2>3. Các lớp Socket trong Java</h2>
+    <p>
+        Java cung cấp các lớp hỗ trợ socket trong gói <b>java.net</b>:
+    </p>
+
+    <ul>
+        <li><b>Socket</b>: dùng cho phía client.</li>
+        <li><b>ServerSocket</b>: dùng cho phía server để lắng nghe kết nối.</li>
+        <li><b>InputStream / OutputStream</b>: đọc và ghi dữ liệu.</li>
+    </ul>
+
+    <p>
+        Nhờ các lớp này, lập trình viên không cần xử lý trực tiếp
+        các chi tiết phức tạp của giao thức mạng.
+    </p>
+
+    <h2>4. Phân loại Socket</h2>
+    <p>
+        Trong thực tế, socket thường được chia thành hai loại chính:
+    </p>
+
+    <ul>
+        <li>
+            <b>TCP Socket:</b>  
+            Đảm bảo dữ liệu truyền đi đầy đủ, đúng thứ tự.
+            Phù hợp cho các ứng dụng yêu cầu độ tin cậy cao.
+        </li>
+        <li>
+            <b>UDP Socket:</b>  
+            Truyền dữ liệu nhanh nhưng không đảm bảo độ tin cậy.
+            Phù hợp cho các ứng dụng thời gian thực.
+        </li>
+    </ul>
+
+    <h2>5. Ứng dụng thực tế của Socket</h2>
+    <p>
+        Socket được ứng dụng rộng rãi trong nhiều hệ thống:
+    </p>
+
+    <ul>
+        <li>Ứng dụng chat trực tuyến.</li>
+        <li>Hệ thống truyền và nhận file.</li>
+        <li>Game online.</li>
+        <li>Web server và API server.</li>
+    </ul>
+
+    <h2>6. Ưu và nhược điểm của Socket</h2>
+    <p><b>Ưu điểm:</b></p>
+    <ul>
+        <li>Giao tiếp trực tiếp, hiệu suất cao.</li>
+        <li>Kiểm soát tốt luồng dữ liệu.</li>
+        <li>Phù hợp cho hệ thống phức tạp.</li>
+    </ul>
+
+    <p><b>Nhược điểm:</b></p>
+    <ul>
+        <li>Cần quản lý kết nối cẩn thận.</li>
+        <li>Dễ phát sinh lỗi nếu xử lý không đúng.</li>
+    </ul>
+
+    <div class="ket-luan">
+        <b>Kết luận:</b><br>
+        Socket là nền tảng của lập trình mạng với Java.
+        Việc nắm vững socket giúp sinh viên hiểu rõ cách
+        các chương trình giao tiếp với nhau trong mạng
+        và là bước đệm quan trọng để học các kỹ thuật nâng cao hơn.
+    </div>
+
+</article>
+
+<footer>
+    © 2025 | Lê Công Toại – Blog Lập Trình Mạng
+</footer>
+
+</body>
+</html>
