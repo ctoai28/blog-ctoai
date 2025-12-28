@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<!-- ===== NAV ===== -->
 <nav>
     <h1>⚡ Toại's Blog</h1>
     <div>
@@ -22,7 +23,6 @@
 <!-- ===== HERO ===== -->
 <section class="hero">
 
-    <!-- TEXT -->
     <div>
         <span class="badge">✨ Chào mừng đến với không gian của mình</span>
 
@@ -47,7 +47,6 @@
         </div>
     </div>
 
-    <!-- AVATAR -->
     <div class="hero-avatar">
         <img src="assets/avatarctoai.jpg" alt="Avatar Lê Công Toại">
     </div>
@@ -56,37 +55,134 @@
 
 <!-- ===== NỘI DUNG CHÍNH ===== -->
 <section class="main-content">
-    <h3 class="section-title">
-        🎯 Nội dung chính
-    </h3>
+    <h3 class="section-title">🎯 Nội dung chính</h3>
 
     <div class="feature-grid">
 
         <div class="feature-card">
             <div class="feature-icon">📡</div>
             <h4>Lập trình mạng Java</h4>
-            <p>
-                Socket, Client – Server, Multicast  
-                và các mô hình ứng dụng thực tế.
-            </p>
+            <p>Socket, Client–Server, Multicast và ứng dụng thực tế.</p>
         </div>
 
         <div class="feature-card">
             <div class="feature-icon">🌐</div>
             <h4>Lập trình Web</h4>
-            <p>
-                JavaScript, Fetch API, AJAX,  
-                WebSocket và realtime app.
-            </p>
+            <p>JavaScript, Fetch API, AJAX, WebSocket.</p>
         </div>
 
         <div class="feature-card">
             <div class="feature-icon">📘</div>
             <h4>Hành trình học CNTT</h4>
-            <p>
-                Ghi chép kiến thức, kinh nghiệm học tập  
-                và quá trình phát triển bản thân.
-            </p>
+            <p>Kiến thức, kinh nghiệm và định hướng phát triển.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== SKILLS PORTFOLIO ===== -->
+<section class="skills-portfolio" id="skills">
+
+    <h3>💼 Kỹ năng & Công nghệ</h3>
+    <p class="skills-desc">
+        Tổng hợp các kỹ năng chuyên ngành Công nghệ phần mềm
+        được sử dụng trong học tập và dự án thực tế.
+    </p>
+
+    <div class="skill-board">
+
+        <!-- FRONTEND -->
+        <div class="skill-column">
+            <h4>🎨 Frontend</h4>
+
+            <div class="skill-item" data-percent="85">
+                <div class="skill-top">
+                    <span class="icon">🌐</span>
+                    <div>
+                        <strong>HTML / CSS</strong>
+                        <small>Core</small>
+                    </div>
+                    <span class="percent">85%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="skill-item" data-percent="75">
+                <div class="skill-top">
+                    <span class="icon">⚙️</span>
+                    <div>
+                        <strong>JavaScript</strong>
+                        <small>Intermediate</small>
+                    </div>
+                    <span class="percent">75%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BACKEND -->
+        <div class="skill-column">
+            <h4>⚙️ Backend</h4>
+
+            <div class="skill-item" data-percent="80">
+                <div class="skill-top">
+                    <span class="icon">☕</span>
+                    <div>
+                        <strong>Java</strong>
+                        <small>Core</small>
+                    </div>
+                    <span class="percent">80%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="skill-item" data-percent="70">
+                <div class="skill-top">
+                    <span class="icon">🔌</span>
+                    <div>
+                        <strong>Client – Server</strong>
+                        <small>Intermediate</small>
+                    </div>
+                    <span class="percent">70%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="skill-item" data-percent="65">
+                <div class="skill-top">
+                    <span class="icon">🗄️</span>
+                    <div>
+                        <strong>MySQL</strong>
+                        <small>Basic</small>
+                    </div>
+                    <span class="percent">65%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="skill-item" data-percent="85">
+                <div class="skill-top">
+                    <span class="icon">🔧</span>
+                    <div>
+                        <strong>Git / GitHub</strong>
+                        <small>Core</small>
+                    </div>
+                    <span class="percent">85%</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -96,6 +192,23 @@
 <footer>
     © 2025 | Lê Công Toại – Blog Lập Trình Mạng
 </footer>
+
+<script>
+const skillItems = document.querySelectorAll('.skill-item');
+
+const skillObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const percent = entry.target.dataset.percent;
+            const bar = entry.target.querySelector('.progress-fill');
+            bar.style.width = percent + '%';
+        }
+    });
+}, { threshold: 0.5 });
+
+skillItems.forEach(skill => skillObserver.observe(skill));
+</script>
+
 
 </body>
 </html>
