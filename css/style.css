@@ -1043,3 +1043,100 @@ nav a.active::after {
         padding: 90px 6%;
     }
 }
+/* ===== PROJECT / ĐỒ ÁN CHUYÊN NGÀNH ===== */
+
+.project-title {
+    font-size: 28px;
+    margin-top: 60px;
+}
+
+.project-desc {
+    margin-top: 14px;
+    max-width: 720px;
+    color: var(--sub);
+    line-height: 1.7;
+}
+
+/* Grid */
+.project-grid {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+/* Card */
+.project-card {
+    position: relative;
+    background: rgba(255,255,255,0.05);
+    padding: 30px 28px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.45s ease;
+    overflow: hidden;
+}
+
+/* Viền gradient */
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    opacity: 0;
+    transition: 0.45s;
+}
+
+/* Icon */
+.project-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    box-shadow: 0 10px 28px rgba(168,85,247,0.45);
+    margin-bottom: 18px;
+}
+
+/* Title */
+.project-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Text */
+.project-card p {
+    font-size: 14.5px;
+    color: var(--sub);
+    line-height: 1.6;
+}
+
+/* Action */
+.project-action {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Hover */
+.project-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow:
+        0 26px 70px rgba(0,0,0,0.45),
+        0 0 70px rgba(168,85,247,0.35);
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
